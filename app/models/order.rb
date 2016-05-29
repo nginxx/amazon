@@ -6,7 +6,7 @@ class Order < ApplicationRecord
   has_many :order_items
 
   validates :total_price, :completed_date, :state, presence: true
-  validates :state, inclusion: {in: %w(in\ progress completed shipped), message: 'Not valid state'}
+  validates :state, inclusion: { in: %w(in\ progress completed shipped), message: 'Not valid state' }
 
   def add_book_to_order(book_id, qty)
     unless book_id.respond_to?(:ceil) && qty.respond_to?(:ceil)
@@ -23,6 +23,6 @@ class Order < ApplicationRecord
   private
 
   def calc_order_price
-    self.order_items.inject(0){ |sum,i| sum + i.quantity * i.price }
+    order_items.inject(0) { |sum, i| sum + i.quantity * i.price }
   end
 end
