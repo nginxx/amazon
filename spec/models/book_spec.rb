@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'Book' do
-  subject { FactoryGirl.build(:book) }
+  subject { FactoryGirl.create(:book) }
 
   context '#validation' do
     [:in_stock, :price, :title].each { |f| it { should validate_presence_of(f) } }

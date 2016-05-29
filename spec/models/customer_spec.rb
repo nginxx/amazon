@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'Customer' do
-  subject { FactoryGirl.build(:customer) }
+  subject { FactoryGirl.create(:customer) }
 
   context '#validation' do
     fields = [:email, :password, :first_name, :last_name]

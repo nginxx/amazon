@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'OrderItem' do
-  subject { FactoryGirl.build(:order_item) }
+  subject { FactoryGirl.create(:order_item) }
 
   context '#validation' do
     it { should validate_presence_of(:price) }

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'Author' do
-  subject { FactoryGirl.build(:author) }
+  subject { FactoryGirl.create(:author) }
 
   context '#validation' do
     it { should validate_presence_of(:first_name) }

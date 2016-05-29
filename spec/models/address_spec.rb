@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'Address' do
-  subject { FactoryGirl.build(:address) }
+  subject { FactoryGirl.create(:address) }
 
   context '#validation' do
     fields = [:address, :zip_code, :city, :phone, :country]

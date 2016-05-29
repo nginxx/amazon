@@ -1,8 +1,10 @@
 FactoryGirl.define do
   factory :book do
-    title { FFaker::Lorem.words }
-    description { FFaker::Lorem.paragraphs(2) }
-    price 99.99
+    title { FFaker::Product.product_name }
+    description { FFaker::Lorem.paragraph }
+    price 19.99
     in_stock 24
+    author
+    category
   end
 end

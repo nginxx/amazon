@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'Category' do
-  subject { FactoryGirl.build(:category) }
+  subject { FactoryGirl.create(:category) }
 
   context '#validation' do
     it { should validate_presence_of(:title) }

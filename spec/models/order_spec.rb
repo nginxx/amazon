@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'Order' do
-  subject { FactoryGirl.build(:order) }
+  subject { FactoryGirl.create(:order) }
 
   context '#validation' do
     [:total_price, :completed_date, :state].each { |f| it { should validate_presence_of(f) } }

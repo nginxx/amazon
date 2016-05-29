@@ -1,5 +1,6 @@
 FactoryGirl.define do
+  sequence(:title) { |i| "Category_#{i}" }
   factory :category do
-    title { FFaker::Lorem.words }
+    title { FactoryGirl.generate(:title) }
   end
 end

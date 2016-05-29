@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'CreditCard' do
-  subject { FactoryGirl.build(:credit_card) }
+  subject { FactoryGirl.create(:credit_card) }
 
   context '#validation' do
     fields = [:number, :cvv, :expiration_month, :expiration_year,
